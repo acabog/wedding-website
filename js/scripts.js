@@ -240,7 +240,7 @@ $(document).ready(function () {
 /********************** Extras **********************/
 
 // Google map
-function initMap() {
+function initMap2() {
     console.log('initMap');
     var location = {lat: 41.35019, lng: 1.97641};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
@@ -254,6 +254,31 @@ function initMap() {
         map: map
     });
 }
+
+function initMap() {
+    var mapCenter = new google.maps.LatLng(41.35019, 1.97641);
+  
+    infowindow = new google.maps.InfoWindow();
+  
+    map = new google.maps.Map(
+        document.getElementById('map'), {center: mapCenter, zoom: 15});
+  
+    var request = {
+      query: 'Mas Vidrier',
+      fields: ['name', 'geometry'],
+    };
+  
+    var service = new google.maps.places.PlacesService(map);
+  
+    service.findPlaceFromQuery(request, function(results, status) {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+          createMarker(results[i]);
+        }
+        map.setCenter(results[0].geometry.location);
+      }
+    });
+  }
 
 function initBBSRMap() {
     console.log('initBBSRMap');
