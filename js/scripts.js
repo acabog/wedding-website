@@ -260,8 +260,12 @@ function initMap() {
   
     infowindow = new google.maps.InfoWindow();
   
-    map = new google.maps.Map(
-        document.getElementById('map'), {center: mapCenter, zoom: 15});
+    var location = {lat: 41.35019, lng: 1.97641};
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+        zoom: 15,
+        center: location,
+        scrollwheel: false
+    });
   
     var request = {
       query: 'Mas Vidrier',
