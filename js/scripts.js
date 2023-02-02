@@ -313,8 +313,11 @@ function createMarker(place, map) {
         position: place.geometry.location,
     });
     console.log(marker);
+    const infowindow;
     google.maps.event.addListener(marker, "click", () => {
-        infowindow.setContent(place.name || "");
+        const infowindow = new google.maps.InfoWindow({
+            content: place.name || "",
+          });
         infowindow.open(map);
     });
     console.log('added listener');
