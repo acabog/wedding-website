@@ -312,15 +312,18 @@ function createMarker(place, map) {
         map,
         position: place.geometry.location,
     });
-    console.log(marker);
-    const infowindow;
-    google.maps.event.addListener(marker, "click", () => {
-        const infowindow = new google.maps.InfoWindow({
-            content: place.name || ""
-          });
-        infowindow.open(map);
+    const infowindow = new google.maps.InfoWindow({
+        content: place.name,
+        ariaLabel: "Uluru",
     });
-    console.log('added listener');
+    
+    marker.addListener("click", () => {
+        infowindow.open({
+            anchor: marker,
+            map,
+        });
+    });
+
 }
 
 function initBBSRMap() {
