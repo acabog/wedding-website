@@ -265,6 +265,15 @@ function initMap2() {
 }
 
 function initMap() {
+    console.log('in initMap');
+    var stylePoi = [
+        {
+          featureType: "poi",
+          stylers: [
+           { visibility: "off" }
+          ]   
+         }
+     ];
     var mapCenter = new google.maps.LatLng(41.35019, 1.97641);
 
     infowindow = new google.maps.InfoWindow();
@@ -273,7 +282,8 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
-        scrollwheel: false
+        scrollwheel: false,
+        styles: stylePoi
     });
 
     var request = {
