@@ -242,11 +242,20 @@ $(document).ready(function () {
 // Google map
 function initMap2() {
     console.log('initMap');
+    var stylePoi = [
+        {
+          featureType: "poi",
+          stylers: [
+           { visibility: "off" }
+          ]   
+         }
+     ];
     var location = {lat: 41.35019, lng: 1.97641};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
-        scrollwheel: false
+        scrollwheel: false,
+        styles: stylePoi
     });
 
     var marker = new google.maps.Marker({
