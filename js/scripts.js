@@ -295,7 +295,7 @@ function initMap() {
 
     service.getDetails(request, function(place, status) {
         console.log('getDetails');
-        createMarker(place);
+        createMarker(place, map);
         console.log(place.geometry.location.lat); 
         console.log(place.geometry.location.lng);        
         map.setCenter(place.geometry.location);
@@ -304,7 +304,7 @@ function initMap() {
 
 }
 
-function createMarker(place) {
+function createMarker(place, map) {
     console.log('in create Marker');
     if (!place.geometry || !place.geometry.location) return;
     console.log('not null');
