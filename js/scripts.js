@@ -316,7 +316,7 @@ function createMarker(place, map) {
     const infowindow;
     google.maps.event.addListener(marker, "click", () => {
         const infowindow = new google.maps.InfoWindow({
-            content: place.name || "",
+            content: place.name || ""
           });
         infowindow.open(map);
     });
