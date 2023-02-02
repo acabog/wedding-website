@@ -285,24 +285,20 @@ function initMap() {
         scrollwheel: false,
         styles: stylePoi
     });
-
+    
     var request = {
-        query: 'Mas Vidrier',
-        fields: ['name', 'geometry'],
-    };
+        placeId: 'ChIJwx69zaWEpBIRXutKoc8mESw',
+        fields: ['name', 'geometry']
+      };
 
     var service = new google.maps.places.PlacesService(map);
 
-    service.findPlaceFromQuery(request, function(results, status) {
-        console.log('find');
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            console.log('ok');
-        for (var i = 0; i < results.length; i++) {
-            createMarker(results[i]);
-            console.log([i]);
-        }
-        map.setCenter(results[0].geometry.location);
-        }
+    service.getDetails(request, function(place, status) {
+        console.log('getDetails');
+        createMarker(place);
+        console.log(place);        
+        map.setCenter(place.geometry.location);
+        
     });
 
 }
