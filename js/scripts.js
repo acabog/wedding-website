@@ -240,12 +240,22 @@ $(document).ready(function () {
 /********************** Extras **********************/
 
 // Google map
-function initMap() {
-    var location = {lat: 22.5932759, lng: 88.27027720000001};
+function initMap2() {
+    console.log('initMap');
+    var stylePoi = [
+        {
+          featureType: "poi",
+          stylers: [
+           { visibility: "off" }
+          ]   
+         }
+     ];
+    var location = {lat: 41.35019, lng: 1.97641};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
-        scrollwheel: false
+        scrollwheel: false,
+        styles: stylePoi
     });
 
     var marker = new google.maps.Marker({
@@ -254,8 +264,71 @@ function initMap() {
     });
 }
 
+function initMap() {
+    console.log('in initMap');
+    var stylePoi = [
+        {
+          featureType: "poi",
+          stylers: [
+           { visibility: "off" }
+          ]   
+         }
+     ];
+    var mapCenter = new google.maps.LatLng(41.35019, 1.97641);
+
+    infowindow = new google.maps.InfoWindow();
+
+    var location = {lat: 41.35019, lng: 1.97641};
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+        zoom: 15,
+        center: location,
+        scrollwheel: false,
+        styles: stylePoi
+    });
+    
+    var request = {
+        placeId: 'ChIJwx69zaWEpBIRXutKoc8mESw',
+        fields: ['name', 'geometry']
+      };
+
+    var service = new google.maps.places.PlacesService(map);
+
+    service.getDetails(request, function(place, status) {
+        console.log('getDetails');
+        createMarker(place, map);
+        console.log(place.geometry.location.lat); 
+        console.log(place.geometry.location.lng);        
+        map.setCenter(place.geometry.location);
+        
+    });
+
+}
+
+function createMarker(place, map) {
+    console.log('in create Marker');
+    if (!place.geometry || !place.geometry.location) return;
+    console.log('not null');
+    const marker = new google.maps.Marker({
+        map,
+        position: place.geometry.location,
+    });
+    const infowindow = new google.maps.InfoWindow({
+        content: place.name,
+        ariaLabel: "Uluru",
+    });
+    
+    marker.addListener("click", () => {
+        infowindow.open({
+            anchor: marker,
+            map,
+        });
+    });
+
+}
+
 function initBBSRMap() {
-    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
+    console.log('initBBSRMap');
+    var la_fiesta = {lat: 41.35019, lng: 1.97641};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: la_fiesta,
