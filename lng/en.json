@@ -18,6 +18,7 @@
     "email" : "Your email",
     "name" : "Your name",
     "plus" : "+1",
-    "count_me" : "Count me in!"
+    "count_me" : "Count me in!",
+    "allergies" : "Allergies and intolerances"
 
 }
