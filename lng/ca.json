@@ -1,0 +1,23 @@
+{
+    "program" : "programa",
+    "location" : "ubicació",
+    "rvsp" : "Confirmar assistència",
+    "marry" : "Ens casem!",
+    "when" : "Serà el 22 d'Abril i volem que en formis part",
+    "ceremony" : "Cerimònia",
+    "aperitive" : "Aperitiu",
+    "banquet" : "Banquet",
+    "party" : "Festa!",
+    "goodbye" : "Comiat",
+    "how_to_arrive" : "Com arribar?",
+    "easy" : "Es més fàcil del que et penses!",
+    "open_map" : "Obre mapa",
+    "open_in_gmaps" : "Obre a Google Maps",
+    "what_waiting" : "A què estàs esperant?",
+    "best_before" : "Agraairïem que poguessis confirmar l'assistència abans del 1 d'abril",
+    "email" : "El teu email",
+    "name" : "El teu nom",
+    "plus" : "Acompanyants",
+    "count_me" : "Compta amb mi!"
+
+}

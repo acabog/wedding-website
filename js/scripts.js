@@ -220,7 +220,6 @@ $(document).ready(function () {
         } else {
             $.post('https://script.google.com/macros/s/AKfycbwoa1fyVDNNWUTUK4UGYCJhHF4eXzIueOrQbcYczP7xrkfOFlMKbWOSgJEK0huZxEF7/exec', data)
                 .done(function (data) {
-                    console.log(data);
                     if (data.result === "error") {
                         $('#alert-wrapper').html(alert_markup('danger', data.message));
                     } else {
@@ -229,7 +228,6 @@ $(document).ready(function () {
                     }
                 })
                 .fail(function (data) {
-                    console.log(data);
                     $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
                 });
         }
@@ -241,7 +239,6 @@ $(document).ready(function () {
 
 // Google map
 function initMap2() {
-    console.log('initMap');
     var stylePoi = [
         {
           featureType: "poi",
@@ -265,7 +262,6 @@ function initMap2() {
 }
 
 function initMap() {
-    console.log('in initMap');
     var stylePoi = [
         {
           featureType: "poi",
@@ -294,10 +290,7 @@ function initMap() {
     var service = new google.maps.places.PlacesService(map);
 
     service.getDetails(request, function(place, status) {
-        console.log('getDetails');
         createMarker(place, map);
-        console.log(place.geometry.location.lat); 
-        console.log(place.geometry.location.lng);        
         map.setCenter(place.geometry.location);
         
     });
@@ -305,9 +298,7 @@ function initMap() {
 }
 
 function createMarker(place, map) {
-    console.log('in create Marker');
     if (!place.geometry || !place.geometry.location) return;
-    console.log('not null');
     const marker = new google.maps.Marker({
         map,
         position: place.geometry.location,
@@ -327,7 +318,6 @@ function createMarker(place, map) {
 }
 
 function initBBSRMap() {
-    console.log('initBBSRMap');
     var la_fiesta = {lat: 41.35019, lng: 1.97641};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
@@ -564,3 +554,43 @@ var MD5 = function (string) {
 
     return temp.toLowerCase();
 };
+
+//This function will be called when user click changing language
+function translate(lng, tagAttr){
+    var translate = new Translate();
+    translate.init(tagAttr, lng);
+    translate.process();
+    if(lng == 'ca'){
+      $("#caTranslator").css('color', '#ffffff');
+      $("#esTranslator").css('color', '#f4623a');
+      $("#enTranslator").css('color', '#f4623a');
+
+    } 
+    if(lng == 'es'){
+      $("#esTranslator").css('color', '#ffffff');
+      $("#caTranslator").css('color', '#f4623a');
+      $("#enTranslator").css('color', '#f4623a');
+
+    }
+
+    if(lng == 'en'){
+        $("#enTranslator").css('color', '#ffffff');
+        $("#caTranslator").css('color', '#f4623a');
+        $("#esTranslator").css('color', '#f4623a');
+
+      }
+}
+$(document).ready(function(){
+  //This is id of HTML element (English) with attribute lng-tag
+  $("#caTranslator").click(function(){
+    translate('ca', 'lng-tag');
+  });
+  //This is id of HTML element (Khmer) with attribute lng-tag
+  $("#esTranslator").click(function(){
+    translate('es', 'lng-tag');
+  });
+
+  $("#enTranslator").click(function(){
+    translate('en', 'lng-tag');
+  });
+});

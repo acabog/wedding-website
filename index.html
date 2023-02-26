@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
-<body id="top">
+<body id="top" onload="translate('ca','lng-tag')">
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
@@ -46,12 +46,17 @@
                 <div class="header-nav">
                     <nav>
                         <ul class="primary-nav">
-                            <li><a href="#schedule">Programa</a></li>
+                            <li><a href="#schedule" lng-tag="program">Programa</a></li>
                             <li><a href="#instagram">Instagram</a></li>
                         </ul>
                         <ul class="member-actions">
-                            <li><a href="#map" class="login">Ubicació</a></li>
-                            <li><a href="#rsvp" class="btn-white btn-small">Confirmar assistència</a></li>
+                            <li><a href="#map" class="login" lng-tag="location">Ubicació</a></li>
+                            <li><a href="#rsvp" class="btn-white btn-small" lng-tag="rvsp">Confirmar assistència</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger lng" id="caTranslator" href="javascript:void(0);">CA</a>
+                                <a class="nav-link js-scroll-trigger lng" id="esTranslator" href="javascript:void(0);" style="margin-left:5px;">ES</a>
+                                <a class="nav-link js-scroll-trigger lng" id="enTranslator" href="javascript:void(0);" style="margin-left:5px;">EN</a>
+                              </li>
                         </ul>
                     </nav>
                 </div>
@@ -75,7 +80,7 @@
         <div class="row">
             <div class="col-sm-4 hidden-xs"></div>
             <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
-                                                           class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
+                                                           class="btn btn-accent btn-large rsvp-btn" lng-tag="rvsp">RSVP</a></div>
             <div class="col-sm-4 hidden-xs"></div>
         </div>
     </div>
@@ -86,8 +91,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3>Ens casem!</h3>
-                <p>Serà el 22 d'Abril i volem que en formis part</p>
+                <h3 lng-tag="marry">Ens casem!</h3>
+                <p lng-tag="when">Serà el 22 d'Abril i volem que en formis part</p>
                 <div class="share-bar"></div>
             </div>
         </div>
@@ -98,25 +103,25 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="header">Programa</h3>
+                <h3 class="header" lng-tag="program">Programa</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="wp3">
-                    <h5>Cerimònia <span class="time">12:30 - 13:30</span></h5>
+                    <h5> <span lng-tag="ceremony">Cerimònia</span> <span class="time">12:30 - 13:30</span></h5>
                 </div>
                 <div class="wp5">
-                    <h5>Aperitiu <span class="time">14:30 - 16:30</span></h5>
+                    <h5 > <spanlng-tag="aperitive">Aperitiu</span> <span class="time">14:30 - 16:30</span></h5>
                 </div>
                 <div class="wp5">
-                    <h5>Banquet <span class="time">16:30 - 19:30</span></h5>
+                    <h5 > <spanlng-tag="banquet">Banquet</span> <span class="time">16:30 - 19:30</span></h5>
                 </div>
                 <div class="wp5">
-                    <h5>Festa! <span class="time">19:30 - 22:30</span></h5>
+                    <h5 > <spanlng-tag="party">Festa!</span> <span class="time">19:30 - 22:30</span></h5>
                 </div>
                 <div class="wp5">
-                    <h5>Comiat i sortida d'autocars <span class="time">22:30 - 23:00</span></h5>
+                    <h5 > <spanlng-tag="goodbye">Comiat i sortida d'autocars</span> <span class="time">22:30 - 23:00</span></h5>
                 </div>
             </div>
         </div>
@@ -144,8 +149,8 @@
 
 <section id="map" class="section-padding">
     <div class="text-center">
-        <h3>Com arribar?</h3>
-        <p>It's way easier than you think!</p>
+        <h3 lng-tag="how_to_arrive">Com arribar?</h3>
+        <p lng-tag="easy">It's way easier than you think!</p>
     </div>
     <div id="map-canvas"></div>
     <div id="map-content-wrapper" class="container pointer-events-none">
@@ -165,10 +170,10 @@
                     </div>
                     <div class="row text-center">
                         <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Obre mapa</a>
+                            <a class="btn btn-accent btn-small" id="btn-show-map" lng-tag="open_map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Obre mapa</a>
                         </div>
                         <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-accent btn-small" href="https://goo.gl/maps/tutjvNcTcg9GBMep8" target="_blank"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Obrir a Google Maps</a>
+                            <a class="btn btn-accent btn-small" href="https://goo.gl/maps/tutjvNcTcg9GBMep8" target="_blank" lng-tag="open_in_gmaps"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Obrir a Google Maps</a>
                         </div>
                     </div>
                 </div>
@@ -186,8 +191,8 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
                     <div class="section-padding">
-                        <h3>Gràcies!</h3>
-                        <p>Ens alegrem que puguis compartr amb nosaltres el nostre dia</p>
+                        <h3 lng-tag="location" lng-tag="thanks">Gràcies!</h3>
+                        <p lng-tag="location" lng-tag="email">Ens alegrem que puguis compartr amb nosaltres el nostre dia</p>
                         <div id="add-to-cal"></div>
                     </div>
                 </div>
@@ -198,8 +203,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <h3>A què estàs esperant?</h3>
-                <p>Agraairïem que poguessis confirmar l'assistència abans del 1 d'abril</p>
+                <h3 lng-tag="what_waiting">A què estàs esperant?</h3>
+                <p lng-tag="best_before">Agraairïem que poguessis confirmar l'assistència abans del 1 d'abril</p>
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
@@ -208,14 +213,14 @@
                             <div class="form-input-group">
                                 <i class="fa fa-envelope"></i><input type="email" name="email" class=""
                                                                      placeholder="El teu email"
-                                                                     required>
+                                                                     required lng-tag="email">
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-user"></i><input name="name" class=""
                                                                  placeholder="El teu nom"
-                                                                 required>
+                                                                 required lng-tag="name">
                             </div>
                         </div>
                     </div>
@@ -225,22 +230,15 @@
                                 <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
                                                                   max="4"
                                                                   placeholder="Acompanyants"
-                                                                  required>
+                                                                  required lng-tag="plus">
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Codi de invitació"
-                                                                required>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="row">
                         <div class="col-md-12" id="alert-wrapper"></div>
                     </div>
-                    <button class="btn-fill rsvp-btn">
+                    <button class="btn-fill rsvp-btn" lng-tag="count_me">
                         Sí,
                         so jo!
                     </button>
@@ -270,6 +268,7 @@
 <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.js"></script>
+<script src="js/translate.js"></script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9SzbfxgogMAL6XA6BJCtLizZqJr0niXI&callback=initMap&libraries=places"></script> -->
 <!-- Google Analytics

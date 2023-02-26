@@ -1,0 +1,23 @@
+{
+    "program" : "programa",
+    "location" : "ubicación",
+    "rvsp" : "Confirmar assistencia",
+    "marry" : "NOS CASAMOS!",
+    "when" : "Será el 22 de Abril y queremos que formes parte",
+    "ceremony" : "ceremonia",
+    "aperitive" : "aperitivo",
+    "banquet" : "Banquete",
+    "party" : "Fiesta!",
+    "goodbye" : "Despedida",
+    "how_to_arrive" : "¿Como llegar?",
+    "easy" : "Es más fácil de lo que piensas!",
+    "open_map" : "Abrir mapa",
+    "open_in_gmaps" : "Abrir en Google Maps",
+    "what_waiting" : "¿A qué estás esperando?",
+    "best_before" : "Agradeceríamos que pudieras confirmar la asistencia antes del 1 de abril",
+    "email" : "Tu email",
+    "name" : "Tu nombre",
+    "plus" : "Acompañantes",
+    "count_me" : "¡Cuenta conmigo!"
+
+}

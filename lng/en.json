@@ -1,0 +1,23 @@
+{
+    "program" : "Program",
+    "location" : "Location",
+    "rvsp" : "RVSP",
+    "marry" : "We are getting married!",
+    "when" : "It will be on 22nd of April and we would like you to be a part of it.",
+    "ceremony" : "Wedding",
+    "aperitive" : "Appetizers",
+    "banquet" : "Lunch",
+    "party" : "Party!",
+    "goodbye" : "Goodbye",
+    "how_to_arrive" : "How do I get there?",
+    "easy" : "It's way easier than you think!",
+    "open_map" : "Show map",
+    "open_in_gmaps" : "Open in Google Maps",
+    "what_waiting" : "What are you waiting for?",
+    "best_before" : "We would greatly appreciate if you could RSVP before 1st of April ",
+    "email" : "Your email",
+    "name" : "Your name",
+    "plus" : "+1",
+    "count_me" : "Count me in!"
+
+}
