@@ -19,6 +19,10 @@
     "name" : "Tu nombre",
     "plus" : "Acompañantes",
     "count_me" : "¡Cuenta conmigo!",
-    "allergies" : "Alergias y intolearncias"
+    "allergies" : "Alergias y intolearncias",
+    "presents" : "Regalos",
+    "presents_text" : "Vuestra compañía es el mejor regalo que nos podéus hacer, pero si aún así nos queréis regalar alguna otra cosa, agradeceríamos que fuera una ayuda para los gastos de la boda (hace muchos años que vivimos juntos y tenemos de todo XD).",
+    "iban_text" :"Si lo queréis hacer en forma de transferéncia, aquí tenéis el IBAN",
+    "iban" :"ES04 2100 3153 5422 0063 7125"
 
 }
