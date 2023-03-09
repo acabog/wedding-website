@@ -1,5 +1,21 @@
 $(document).ready(function () {
 
+    /****************Translation stuff***********/
+
+    $("#caTranslator").click(function(){
+        translate('ca', 'lng-tag');
+    });
+    //This is id of HTML element (Khmer) with attribute lng-tag
+    $("#esTranslator").click(function(){
+        translate('es', 'lng-tag');
+    });
+
+    $("#enTranslator").click(function(){
+        translate('en', 'lng-tag');
+    });
+    console.log(window.navigator.language);
+    translate(window.navigator.language, 'lng-tag');
+
     /***************** Waypoints ******************/
 
     $('.wp1').waypoint(function () {
@@ -28,25 +44,10 @@ $(document).ready(function () {
         offset: '75%'
     });
     $('.wp6').waypoint(function () {
-        $('.wp6').addClass('animated fadeInRight');
+        $('.wp6').addClass('animated fadeInUp');
     }, {
         offset: '75%'
-    });
-    $('.wp7').waypoint(function () {
-        $('.wp7').addClass('animated fadeInUp');
-    }, {
-        offset: '75%'
-    });
-    $('.wp8').waypoint(function () {
-        $('.wp8').addClass('animated fadeInLeft');
-    }, {
-        offset: '75%'
-    });
-    $('.wp9').waypoint(function () {
-        $('.wp9').addClass('animated fadeInRight');
-    }, {
-        offset: '75%'
-    });
+    });    
 
     /***************** Initiate Flexslider ******************/
     $('.flexslider').flexslider({
@@ -560,6 +561,9 @@ var MD5 = function (string) {
 //This function will be called when user click changing language
 function translate(lng, tagAttr){
     var translate = new Translate();
+    if(!["ca","es","en"].includes(lng)){
+        lng = "en";
+    }
     translate.init(tagAttr, lng);
     translate.process();
     if(lng == 'ca'){
