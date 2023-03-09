@@ -9,23 +9,48 @@
         width: 70%;
     }
 
+    .hero .hero-content .img-desktop{
+        display : block;
+    }
+
+    .hero .hero-content .img-mobile{
+        display : none;
+    }
+
 }
 
 @media screen and (max-width: 1024px) {
     .hero .hero-content {
-        padding-top: 50%;
+        padding-top:15%;
+    }
+
+    .hero .hero-content .img-desktop{
+        display : block;
+    }
+
+    .hero .hero-content .img-mobile{
+        display : none;
     }
 }
 
 /* Responsive nav kicks in */
 @media screen and (max-width: 991px) {
+
+    .hero .hero-content .img-desktop{
+        display : block;
+    }
+
+    .hero .hero-content .img-mobile{
+        display : none;
+    }
+
     header {
         width: 90%;
         padding-left: 25px;
     }
 
     .hero .hero-content {
-        padding-top: 50%;
+        padding-top:20%;
     }
 
     .header-nav {
@@ -243,6 +268,10 @@
         padding-top: 40px;
     }
 
+    .presents
+    {
+        padding-top: 120px;
+    }
     footer .social-share {
         display: none;
     }
@@ -254,7 +283,15 @@
 
 @media screen and (max-width: 640px) {
     .hero .hero-content {
-        padding-top: 100%;
+        padding-top: 10%;
+
+    }
+    .hero .hero-content .img-desktop{
+        display : none;
+    }
+
+    .hero .hero-content .img-mobile{
+        display : block;
     }
 
     #eng-pics .img-wrap i {
@@ -293,11 +330,16 @@
 
 @media screen and (max-width: 480px) {
     .hero .hero-content {
-        padding-top: 110%;
+        padding-top: 20%;
     }
     
-    .hero .hero-content img {
-        width: 65%;
+
+    .hero .hero-content .img-desktop{
+        display : none;
+    }
+
+    .hero .hero-content .img-mobile{
+        display : block;
     }
 
     .hero .btn {
@@ -357,7 +399,15 @@
 
 @media screen and (max-width: 320px) {
     .hero .hero-content {
-        padding-top: 130%;
+        padding-top: 25%;
+    }
+
+    .hero .hero-content .img-desktop{
+        display : none;
+    }
+
+    .hero .hero-content .img-mobile{
+        display : block;
     }
 
     .rsvp {
