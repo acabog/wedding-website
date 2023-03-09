@@ -16,13 +16,13 @@
     <meta name="theme-color" content="#ffffff">
     <meta property="og:title" content="Ens casem!">
     <meta property="og:description" content="We would like to invite you to our big day.">
-    <meta property="og:image" content="https://wedding.ramswaroop.me/img/hero-min.jpg">
+    <meta property="og:image" content="img/logo.png">
     <meta property="og:type" content="website">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png">
     <link rel="manifest" href="manifest.json">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="mask-icon" href="img/logo.png" color="#5bbad5">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/queries.css">
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/0960316077.js" crossorigin="anonymous"></script>
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body id="top" onload="translate('ca','lng-tag')">
@@ -228,12 +228,22 @@
                             </div>
                         </div>
 
-                    
-
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="allergies" class=""
-                                                                placeholder="Alèrgies i intoleràncies"
+                                <i class="fa fa-children"></i><input type="number" name="kids" class="" min="0"
+                                                                  max="10"
+                                                                  placeholder="Nens"
+                                                                  required lng-tag="kids">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-shrimp"></i><input name="allergies" class=""
+                                                                placeholder="Alèrgies, intoleràncies i altres restriccions"
                                                                  lng-tag="allergies">
                             </div>
                         </div>
