@@ -14,7 +14,7 @@
     "open_map" : "Abrir mapa",
     "open_in_gmaps" : "Abrir en Google Maps",
     "what_waiting" : "¿A qué estás esperando?",
-    "best_before" : "Agradeceríamos que pudieras confirmar la asistencia antes del 1 de abril",
+    "best_before" : "Agradeceríamos que pudieras confirmar la asistencia antes del 15 de abril. Podéis usar el siguiente formulario o confirmarlo directamente con nosotros",
     "email" : "Tu email",
     "name" : "Tu nombre",
     "plus" : "Acompañantes",
@@ -24,6 +24,8 @@
     "presents_text" : "Vuestra compañía es el mejor regalo que nos podéus hacer, pero si aún así nos queréis regalar alguna otra cosa, agradeceríamos que fuera una ayuda para los gastos de la boda (hace muchos años que vivimos juntos y tenemos de todo XD).",
     "iban_text" :"Si lo queréis hacer en forma de transferéncia, aquí tenéis el IBAN",
     "iban" :"ES04 2100 3153 5422 0063 7125",
-    "kids" : "Niños"
+    "kids" : "Niños",
+    "thanks" : "Gracias!",
+    "happy" : "Nos alegramos que puedas compartir con nosotros nuestro día"
 
 }

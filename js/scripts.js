@@ -138,32 +138,32 @@ $(document).ready(function () {
     });
 
     /********************** Social Share buttons ***********************/
-    var share_bar = document.getElementsByClassName('share-bar');
-    var po = document.createElement('script');
-    po.type = 'text/javascript';
-    po.async = true;
-    po.src = 'https://apis.google.com/js/platform.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(po, s);
+    // var share_bar = document.getElementsByClassName('share-bar');
+    // var po = document.createElement('script');
+    // po.type = 'text/javascript';
+    // po.async = true;
+    // po.src = 'https://apis.google.com/js/platform.js';
+    // var s = document.getElementsByTagName('script')[0];
+    // s.parentNode.insertBefore(po, s);
 
-    for (var i = 0; i < share_bar.length; i++) {
-        var html = '<iframe allowtransparency="true" frameborder="0" scrolling="no"' +
-            'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=ramswarooppatra&amp;hashtags=ramandantara&amp;count=horizontal"' +
-            'style="width:105px; height:21px;">' +
-            '</iframe>' +
+    // for (var i = 0; i < share_bar.length; i++) {
+    //     var html = '<iframe allowtransparency="true" frameborder="0" scrolling="no"' +
+    //         'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=ramswarooppatra&amp;hashtags=ramandantara&amp;count=horizontal"' +
+    //         'style="width:105px; height:21px;">' +
+    //         '</iframe>' +
 
-            '<iframe src="//www.facebook.com/plugins/like.php?href=' + encodeURIComponent(window.location) + '&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=101094500229731&amp;width=150" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>' +
+    //         '<iframe src="//www.facebook.com/plugins/like.php?href=' + encodeURIComponent(window.location) + '&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=101094500229731&amp;width=150" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>' +
 
-            '<div class="g-plusone" data-size="medium"></div>';
+    //         '<div class="g-plusone" data-size="medium"></div>';
 
-        // '<iframe src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=medium&amp;url=' + encodeURIComponent(window.location) + '" allowtransparency="true" frameborder="0" scrolling="no" title="+1" style="width:105px; height:21px;"></iframe>';
+    //     // '<iframe src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=medium&amp;url=' + encodeURIComponent(window.location) + '" allowtransparency="true" frameborder="0" scrolling="no" title="+1" style="width:105px; height:21px;"></iframe>';
 
-        share_bar[i].innerHTML = html;
-        share_bar[i].style.display = 'inline-block';
-    }
+    //     share_bar[i].innerHTML = html;
+    //     share_bar[i].style.display = 'inline-block';
+    // }
 
     /********************** Embed youtube video *********************/
-    $('.player').YTPlayer();
+    // $('.player').YTPlayer();
 
 
     /********************** Toggle Map Content **********************/
@@ -185,23 +185,21 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Ram and Antara's Wedding",
+            title: "Boda de Laia i Albert",
 
             // Event start date
-            start: new Date('Nov 27, 2017 10:00'),
+            start: new Date('Apr 22, 2023 12:30'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Nov 29, 2017 00:00'),
+            end: new Date('Apr 22, 2023 23:00'),
 
             // Event Address
-            address: 'ITC Fortune Park Hotel, Kolkata',
+            address: 'Mas Vidrier, Baixada de la Masia, 1, 08629 Torrelles de Llobregat, Barcelona, Spain',
 
-            // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."
         }
     });
 
@@ -212,8 +210,15 @@ $(document).ready(function () {
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         var data = $(this).serialize();
-
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        var lang = this.formLang.value;
+        if(lang == "en"){
+            $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        }else if (lang == "ca"){
+            $('#alert-wrapper').html(alert_markup('info', '<strong>Un moment!</strong> Estem desant les teves respostes.'));
+        }else if (lang == "es"){
+            $('#alert-wrapper').html(alert_markup('info', '<strong>Un momento!</strong> Estamos guardando tus respuestas'));
+        }
+        
 
         // if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
         //     && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
@@ -564,6 +569,7 @@ function translate(lng, tagAttr){
     if(!["ca","es","en"].includes(lng)){
         lng = "en";
     }
+    $("#formLang").val(lng);
     translate.init(tagAttr, lng);
     translate.process();
     if(lng == 'ca'){
@@ -586,17 +592,3 @@ function translate(lng, tagAttr){
 
       }
 }
-$(document).ready(function(){
-  //This is id of HTML element (English) with attribute lng-tag
-  $("#caTranslator").click(function(){
-    translate('ca', 'lng-tag');
-  });
-  //This is id of HTML element (Khmer) with attribute lng-tag
-  $("#esTranslator").click(function(){
-    translate('es', 'lng-tag');
-  });
-
-  $("#enTranslator").click(function(){
-    translate('en', 'lng-tag');
-  });
-});
