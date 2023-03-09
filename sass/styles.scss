@@ -252,7 +252,7 @@ Hero
 ========================================================================== */
 .hero {
   min-height: 750px;
-  background: url('../img/hero-LiA.jpg') center center;
+  background: url('../img/viejo-fondo-vendimia.png') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -278,12 +278,17 @@ Hero
     margin-bottom: 80px;
   }
   .hero-content {
-    padding-top: 40%;
+    padding-top: 5%;
   }
-  .hero-content img {
-    width: 55%;
-    margin-bottom: 12%;
-  }
+  .hero-content{
+    img {
+      width: 100%;
+      margin-bottom: 0%;
+    }
+    .img-mobile{
+      display: none;
+    }
+  } 
 }
 .navigation {
   transition: all 300ms ease-in-out;
