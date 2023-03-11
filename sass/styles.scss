@@ -285,10 +285,13 @@ Hero
       width: 100%;
       margin-bottom: 0%;
     }
-    .img-mobile{
-      display: none;
-    }
+
   } 
+  
+  .img-mobile{
+    display: none;
+  }
+
 }
 .navigation {
   transition: all 300ms ease-in-out;
@@ -319,9 +322,7 @@ header {
       margin-right: 20px;
     }
   }
-  .logo {
-    display: inline-block;
-  }
+
   .logo img {
     height: 19px;
   }
