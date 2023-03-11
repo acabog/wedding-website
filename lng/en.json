@@ -14,15 +14,18 @@
     "open_map" : "Show map",
     "open_in_gmaps" : "Open in Google Maps",
     "what_waiting" : "What are you waiting for?",
-    "best_before" : "We would greatly appreciate if you could RSVP before 1st of April ",
+    "best_before" : "We would greatly appreciate if you could RSVP before 10th of April. You can use the next form or confirm it directly with us",
     "email" : "Your email",
     "name" : "Your name",
     "plus" : "+1",
     "count_me" : "Count me in!",
-    "allergies" : "Allergies and intolerances",
+    "allergies" : "Allergies, intolerances and other restrictions",
     "presents" : "Presents",
     "presents_text" : "Having you is the best present you can give us, but if you want to five us something else, we would appreciate if it was help wit the wedding expenses (we have been living together for a lot of year so we have everything XD).",
     "iban_text" :"If you want to do it with a bank transfer, here it is the IBAN",
-    "iban" :"ES04 2100 3153 5422 0063 7125"
+    "iban" :"ES04 2100 3153 5422 0063 7125",
+    "kids" : "Children",
+    "thanks" : "Thank you!",
+    "happy" : "We are glad to see you join us on our big day"
 
 }

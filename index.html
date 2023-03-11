@@ -16,13 +16,13 @@
     <meta name="theme-color" content="#ffffff">
     <meta property="og:title" content="Ens casem!">
     <meta property="og:description" content="We would like to invite you to our big day.">
-    <meta property="og:image" content="https://wedding.ramswaroop.me/img/hero-min.jpg">
+    <meta property="og:image" content="img/logo.png">
     <meta property="og:type" content="website">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png">
     <link rel="manifest" href="manifest.json">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="mask-icon" href="img/logo.png" color="#5bbad5">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
@@ -30,10 +30,10 @@
     <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/queries.css">
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/0960316077.js" crossorigin="anonymous"></script>
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
-<body id="top" onload="translate('ca','lng-tag')">
+<body id="top">
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
@@ -47,10 +47,11 @@
                     <nav>
                         <ul class="primary-nav">
                             <li><a href="#schedule" lng-tag="program">Programa</a></li>
-                        </ul>
-                        <ul class="member-actions">
                             <li><a href="#map" class="login" lng-tag="location">Ubicació</a></li>
                             <li><a href="#presents" class="login" lng-tag="presents">Regals</a></li>
+                        </ul>
+                        <ul class="member-actions">
+
                             <li><a href="#rsvp" class="btn-white btn-small" lng-tag="rvsp">Confirmar assistència</a></li>
                             <li class="nav-item">
                                 <a class="nav-link js-scroll-trigger lng" id="caTranslator" href="javascript:void(0);">CA</a>
@@ -69,11 +70,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <div class="hero-content text-center">
-                    <img src="img/logo-lg.png" class="img-desktop">
+                <div class="hero-content text-center img-desktop">
+                    <img src="img/logo-lg.png">
                 </div>
-                <div class="hero-content text-center">
-                    <img src="img/logo-lg-mbl.png" class="img-mobile">
+                <div class="hero-content text-center img-mobile">
+                    <img src="img/logo-lg-mbl.png">
                 </div>
             </div>
         </div>
@@ -107,20 +108,20 @@
         </div>
         <div class="row">
             <div class="text-center events">
-                <div class="wp3">
+                <div class="wp1">
                     <h5> <span lng-tag="ceremony">Cerimònia</span> <span class="time">12:30 - 13:30</span></h5>
                 </div>
-                <div class="wp5">
-                    <h5 > <spanlng-tag="aperitive">Aperitiu</span> <span class="time">14:30 - 16:30</span></h5>
+                <div class="wp2">
+                    <h5 > <span lng-tag="aperitive">Aperitiu</span> <span class="time">14:30 - 16:30</span></h5>
+                </div>
+                <div class="wp3">
+                    <h5 > <span lng-tag="banquet">Banquet</span> <span class="time">16:30 - 19:30</span></h5>
+                </div>
+                <div class="wp4">
+                    <h5 > <span lng-tag="party">Festa!</span> <span class="time">19:30 - 22:30</span></h5>
                 </div>
                 <div class="wp5">
-                    <h5 > <spanlng-tag="banquet">Banquet</span> <span class="time">16:30 - 19:30</span></h5>
-                </div>
-                <div class="wp5">
-                    <h5 > <spanlng-tag="party">Festa!</span> <span class="time">19:30 - 22:30</span></h5>
-                </div>
-                <div class="wp5">
-                    <h5 > <spanlng-tag="goodbye">Comiat</span> <span class="time">22:30 - 23:00</span></h5>
+                    <h5 > <span lng-tag="goodbye">Comiat</span> <span class="time">22:30 - 23:00</span></h5>
                 </div>
             </div>
         </div>
@@ -169,7 +170,7 @@
                 <h3 lng-tag="presents">Regals</h3>
                 <p lng-tag="presents_text">La vostra companyia és el millor regal que ens podeu fer, però si tot i així ens en voleu fer algun altre agrairïem que fos una ajuda per les despeses del casament (fa molts anys que vivim junts i tenim de tot XD). </p>
                 <p lng-tag="iban_text">Si ho voleu fer en forma de transferència, aquí teniu l'IBAN:</p>
-                <p ><b lng-tag="iban">ES04 2100 3153 5422 0063 7125</b></p>
+                <p class="wp6"><b>ES04 2100 3153 5422 0063 7125</b></p>
             </div>
         </div>
     </div>
@@ -186,7 +187,7 @@
                     </button>
                     <div class="section-padding">
                         <h3 lng-tag="thanks">Gràcies!</h3>
-                        <p lng-tag="email">Ens alegrem que puguis compartr amb nosaltres el nostre dia</p>
+                        <p lng-tag="happy">Ens alegrem que puguis compartr amb nosaltres el nostre dia</p>
                         <div id="add-to-cal"></div>
                     </div>
                 </div>
@@ -228,18 +229,28 @@
                             </div>
                         </div>
 
-                    
-
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="allergies" class=""
-                                                                placeholder="Alèrgies i intoleràncies"
+                                <i class="fa fa-children"></i><input type="number" name="kids" class="" min="0"
+                                                                  max="10"
+                                                                  placeholder="Nens"
+                                                                  required lng-tag="kids">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-shrimp"></i><input name="allergies" class=""
+                                                                placeholder="Alèrgies, intoleràncies i altres restriccions"
                                                                  lng-tag="allergies">
                             </div>
                         </div>
 
                     </div>
-
+                    <input type="hidden" name="lang" id="formLang"/>
                     <div class="row">
                         <div class="col-md-12" id="alert-wrapper"></div>
                     </div>
@@ -272,8 +283,8 @@
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
-<script src="js/scripts.js"></script>
-<script src="js/translate.js"></script>
+<script src="js/scripts.min.js"></script>
+<script src="js/translate.min.js"></script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9SzbfxgogMAL6XA6BJCtLizZqJr0niXI&callback=initMap&libraries=places"></script> -->
 <!-- Google Analytics

@@ -14,15 +14,18 @@
     "open_map" : "Obre mapa",
     "open_in_gmaps" : "Obre a Google Maps",
     "what_waiting" : "A què estàs esperant?",
-    "best_before" : "Agraairïem que poguessis confirmar l'assistència abans del 1 d'abril",
+    "best_before" : "Agrairïem que poguessis confirmar l'assistència abans del 10 d'abril. Podeu fer servir el següent formulari o confirmar-ho directament amb nosaltres",
     "email" : "El teu email",
     "name" : "El teu nom",
     "plus" : "Acompanyants",
     "count_me" : "Compta amb mi!",
-    "allergies" : "Al·lèrgies i intoleràncies",
+    "allergies" : "Alèrgies, intoleràncies i altres restriccions",
     "presents" : "Regals",
-    "presents_text" : "La vostra companyia és el millor regal que ens podeu fer, però si tot i així ens en voleu fer algun altre agrairïem que fos una ajuda per les despeses del casament (fa molts anys que vivim junts i tenim de tot XD).",
+    "presents_text" : "La vostra companyia és el millor regal que ens podeu fer, però si tot i així ens en voleu fer algun altre, agrairïem que fos una ajuda per les despeses del casament (fa molts anys que vivim junts i tenim de tot XD).",
     "iban_text" :"   Si ho voleu fer en forma de transferència, aquí teniu l'IBAN:",
-    "iban" :"ES04 2100 3153 5422 0063 7125"
+    "iban" :"ES04 2100 3153 5422 0063 7125",
+    "kids" : "Nens",
+    "thanks" : "Gràcies!",
+    "happy" : "Ens alegrem que puguis compartr amb nosaltres el nostre dia"
 
 }
