@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    /****************force https ****************/
+    if (window.location.protocol != "https:") {
+        window.location.protocol = "https:"
+    }
     /****************Translation stuff***********/
 
     $("#caTranslator").click(function(){
