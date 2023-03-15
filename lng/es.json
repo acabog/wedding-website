@@ -26,6 +26,10 @@
     "iban" :"ES04 2100 3153 5422 0063 7125",
     "kids" : "Niños",
     "thanks" : "Gracias!",
-    "happy" : "Nos alegramos que puedas compartir con nosotros nuestro día"
+    "happy" : "Nos alegramos que puedas compartir con nosotros nuestro día",
+    "music" : "Qué quieres bailar?",
+    "music_text" : "Si te gustaría que sonase una canción o artista en la fiesta dinoslo, intentaremos que la pinchen", 
+    "song" : "Canción o artista",
+    "play" : "Ponla!!"
 
 }

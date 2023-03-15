@@ -1,9 +1,5 @@
 $(document).ready(function () {
 
-    /****************force https ****************/
-    if (window.location.protocol != "https:") {
-        window.location.protocol = "https:"
-    }
     /****************Translation stuff***********/
 
     $("#caTranslator").click(function(){
@@ -214,7 +210,7 @@ $(document).ready(function () {
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         var data = $(this).serialize();
-        var lang = this.formLang.value;
+        var lang = this.lang.value;
         if(lang == "en"){
             $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
         }else if (lang == "ca"){
@@ -245,7 +241,53 @@ $(document).ready(function () {
         // }
     });
 
+
+    console.log('music');
+    /********************** MUSIC **********************/
+    $('#music-form').on('submit', function (e) {
+        console.log('music submit');
+        e.preventDefault();
+        var data = $(this).serialize();
+        var lang = this.lang.value;
+        console.log('music');lang
+        if(lang == "en"){
+            $('#alert-wrapper-music').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving it'));
+        }else if (lang == "ca"){
+            $('#alert-wrapper-music').html(alert_markup('info', '<strong>Un moment!</strong> Ho estem desant'));
+        }else if (lang == "es"){
+            $('#alert-wrapper-music').html(alert_markup('info', '<strong>Un momento!</strong> Lo estamos guardando'));
+        }
+        
+
+        // if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
+        //     && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
+        //     $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
+        // } else { 
+
+        $.post('https://script.google.com/macros/s/AKfycbx2Sfpdbd3lliK5nJBV2a50GJPUWP6pY0nMyoC8Vd23jBt5SeEiboqXI9Ij87y3lwhe/exec', data)
+            .done(function (data) {
+                if (data.result === "error") {
+                    $('#alert-wrapper').html(alert_markup('danger', data.message));
+                } else {
+                    if(lang == "en"){
+                        $('#alert-wrapper-music').html(alert_markup('success', 'Done!'));
+                    }else if (lang == "ca"){
+                        $('#alert-wrapper-music').html(alert_markup('success', 'Fet!'));
+                    }else if (lang == "es"){
+                        $('#alert-wrapper-music').html(alert_markup('success', 'Hecho"'));
+                    }
+                }
+            })
+            .fail(function (data) {
+                $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+            });
+
+        // }
+    });
+
 });
+
+
 
 /********************** Extras **********************/
 
@@ -574,6 +616,7 @@ function translate(lng, tagAttr){
         lng = "en";
     }
     $("#formLang").val(lng);
+    $("#musicLang").val(lng);
     translate.init(tagAttr, lng);
     translate.process();
     if(lng == 'ca'){

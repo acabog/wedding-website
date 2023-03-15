@@ -26,6 +26,10 @@
     "iban" :"ES04 2100 3153 5422 0063 7125",
     "kids" : "Nens",
     "thanks" : "Gràcies!",
-    "happy" : "Ens alegrem que puguis compartr amb nosaltres el nostre dia"
+    "happy" : "Ens alegrem que puguis compartr amb nosaltres el nostre dia",
+    "music" : "Què vols ballar?",
+    "music_text" : "Si t'agradaria que sonés alguna cançó o artista a la festa digue'ns-ho, intentarem que la punxin",
+    "song" : "Cançó o artista",
+    "play" : "Posa-la!"
 
 }
