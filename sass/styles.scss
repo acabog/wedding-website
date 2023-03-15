@@ -323,9 +323,13 @@ header {
     }
   }
 
-  .logo img {
-    height: 19px;
+  .logo{
+    display: inline-block;
+    img {
+      height: 19px;
+    }
   }
+
   ul.primary-nav {
     margin: 0 0 0 75px;
     padding: 0;
@@ -357,6 +361,7 @@ header {
           color: $accent-color;
         }
       }
+
     }
   }
   .header-nav {
