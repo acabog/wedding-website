@@ -26,6 +26,10 @@
     "iban" :"ES04 2100 3153 5422 0063 7125",
     "kids" : "Children",
     "thanks" : "Thank you!",
-    "happy" : "We are glad to see you join us on our big day"
+    "happy" : "We are glad to see you join us on our big day",
+    "music" : "What do you want to dance to?",
+    "music_text" : "If you want a song or artist to play in the party tell us, we will try for it t be played",
+    "song" : "Song or artist",
+    "play" : "Add it!!"
 
 }
